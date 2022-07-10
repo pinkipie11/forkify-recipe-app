@@ -12,10 +12,6 @@ import 'regenerator-runtime/runtime'; // polifyl async-await
 import recipeView from './views/recipeView.js';
 import { async } from 'regenerator-runtime';
 
-// if (module.hot) {
-//   module.hot.accept();
-// }
-
 const controlRecipes = async function () {
   try {
     const id = window.location.hash.slice(1);
@@ -133,10 +129,6 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
-const newFeature = function () {
-  console.log('Welcome to the application!');
-};
-
 // Subscriber
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
@@ -146,7 +138,5 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  newFeature();
-  console.log('New-feature');
 };
 init();
